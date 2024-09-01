@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dark.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./images/icon.jpeg" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="topnav">
+        <div class="logo">
+          <i class="fa-sharp fa-solid fa-plane"></i>
+          <h1>Travel Blog</h1>
+        </div>
+        <div class="container flex">
+          <a href="#" class="headings">Home</a>
+          <a href="#" class="headings">Categories</a>
+          <a href="#" class="headings">Blog</a>
+          <a href="#" class="headings">Places</a>
+          <a href="#" class="headings">Contact us</a>
+        </div>
+        <div class="searchbar_flex">
+          <input type="checkbox" name="check" id="checkbox" hidden="" />
+          <label for="checkbox" class="toggle">
+            <div class="toggle_circle"></div>
+          </label>
+          <div class="navbaronoff">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="headerimg">
+        <div class="container">
+          <div class="headerinfo">
+            <h1 class="title">Goa</h1>
+            <p class="para">
+              Dive into the vibrant culture of Goa, where sun-kissed beaches meet bustling markets and ancient churches. Discover the magic of its nightlife, savor local delicacies, and experience the unique blend of Indian and Portuguese cultures that make Goa a must-visit destination
+            </p>
+            <div class="explore">
+              <a href="#" class="headerbtn">EXPLORE →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="headerslider">
+        <div class="slidertitle flex">
+          <h2>My Latest Visits :</h2>
+          <div class="sliderbtn">
+            <button id="sright"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="sleft"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="headers_cards flex">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="./images/goa.jpg" alt="Goa" />
+            <div class="info">
+              <span>Shimla</span>
+              <h3>Charming Colonial Town</h3>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="./images/Manali.jpeg" alt="Goa" />
+            <div class="info">
+              <span>Manali</span>
+              <h3>Explore Endless Beauty</h3>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="./images/morni.jpeg" alt="Goa" />
+            <div class="info">
+              <span>Morni Hills</span>
+              <h3>Discover Your Adventure</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="threecards container flex">
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="./images/redFort.avif" />
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="tcard-info flex">
+            <label class="tlabel">Red Fort</label>
+            <h4>Delhi</h4>
+          </div>
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p>
+            The Red Fort in Delhi, a UNESCO World Heritage Site, stands as a symbol of India's rich history. Built by the Mughal Emperor Shah Jahan in the 17th century, this fort is a masterpiece of Mughal architecture and a testament to India's independence struggle.
+          </p>
+          <div class="read-more">Read More</div>
+        </div>
+
+        <!-- card2 -->
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="./images/India Gate.webp" />
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="tcard-info flex">
+            <label class="tlabel">India Gate</label>
+            <h4>Delhi</h4>
+          </div>
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p>
+            A war memorial located in the heart of New Delhi, India Gate is a tribute to the soldiers who fought and died in World War I. Surrounded by lush green lawns, it's a popular spot for evening strolls and picnics.
+          </p>
+          <div class="read-more">Read More</div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="./images/taj mahal.avif" />
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="tcard-info flex">
+            <label class="tlabel">Taj Mahal</label>
+            <h4>Agra</h4>
+          </div>
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p>
+            The Taj Mahal, an epitome of love and an architectural wonder, is one of the Seven Wonders of the World. Built by Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, its pristine white marble and intricate carvings make it a mesmerizing sight.
+          </p>
+          <div class="read-more">Read More</div>
+        </div>
+      </div>
+      <div class="places">
+        <h2>Places To Visit :</h2>
+      </div>
+      <!-- Small cards -->
+      <div class="small-cards">
+        <div class="sdcard">
+          <div class="smallcard-img">
+            <img src="./images/mumbai.webp" />
+            <div class="smallcard-info flex">
+              <label class="slabel">Mumbai</label>
+              <p>
+                Known as the "City of Dreams," Mumbai offers a vibrant mix of cultures, bustling markets, and iconic landmarks like the Gateway of India.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!--  -->
+        <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/dalhousie.webp" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Dalhousie</label>
+                <p>
+                  Nestled in the lap of the Himalayas, Dalhousie is a quaint hill station known for its colonial charm and scenic beauty.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/ladakh.jpg" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Ladakh</label>
+                <p>
+                  Ladakh is a cold desert, known for its rugged landscapes, Buddhist monasteries, and unique culture.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/varanasi.webp" alt="Varanasi" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Varanasi</label>
+                <p>
+                  Varanasi, located on the banks of the Ganges, is one of the oldest cities in the world, known for its spiritual ambiance and vibrant ghats.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!--  -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/varanasi.webp" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Morni Hills</label>
+                <p>
+                  A hidden gem in the hills, Morni offers serene landscapes and adventure opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/seema malka columbo.webp" alt="Seema Malaka Temple, Colombo" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Seema Malaka Temple</label>
+                <p>
+                  Located in Colombo, Sri Lanka, Seema Malaka is a serene Buddhist temple situated on the Beira Lake, known for its tranquil ambiance and scenic beauty.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Golden Temple -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/golden temple.avif" alt="Golden Temple, Amritsar" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Golden Temple</label>
+                <p>
+                  The Golden Temple, located in Amritsar, is a spiritual and cultural center for Sikhs worldwide, renowned for its stunning architecture and peaceful surroundings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Humayun's Tomb -->
+          <div class="sdcard">
+            <div class="smallcard-img">
+              <img src="./images/Humayun Temple Delhi.avif" alt="Humayun's Tomb, Delhi" />
+              <div class="smallcard-info flex">
+                <label class="slabel">Humayun's Tomb</label>
+                <p>
+                  A UNESCO World Heritage Site in Delhi, Humayun's Tomb is a masterpiece of Mughal architecture, with beautiful gardens and intricate carvings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+
+       <div class="video">
+        <video class="vid" autoplay muted loop id="myVideo">
+            <source src="./The World Travel Guy - Website Background.mp4" type="video/mp4">
+          </video>
+          <div class="imagetext">
+            <h1>EXPLORE. DREAM. DISCOVER</h1>
+            <p>This is a India travel blog featuring beautiful destinations , new experiences and hidden places around the India </p>
+          </div>
+
+       </div>
+       <section class = "Hikes">
+        <div class="hike-text">
+            <h1>------------------HIKES-------------------</h1>
+            <h2>Bucket List Hiking guides</h2>
+        </div>
+    </section>
+        <section class = "photocard container">
+            <div class="cr">
+                <img src="./images/mysore.jpeg"/>
+                <p>Mysore Palace, known as Amba Vilas Palace</p>
+            </div>
+            <div class="cr">
+                <img src="./images/jaisalmer.jpeg"/>
+                <p>Jaisalmer state in western India of Rajasthan</p>
+            </div>
+            <div class="cr">
+                <img src="./images/ooty.jpeg"/>
+                <p>Ooty a resort town in the Western Ghats mountains</p>
+            </div>
+        </section>
+
+        <section class = "photocard container">
+          <div class="cr">
+              <img src="./images/munnar.jpeg"/>
+              <p>Munnar a town in  Western Ghats</p>
+          </div>
+          <div class="cr">
+              <img src="./images/udaipur.jpeg"/>
+              <p>Udaipur, the capital of the Mewar Kingdom</p>
+          </div>
+          <div class="cr">
+              <img src="./images/coorg.jpeg"/>
+              <p>Madikeri,a hill town in southern India</p>
+          </div>
+      </section>
+      <section class = "Hikes">
+        <div class="hike-text">
+            <h1>------------------Destinations-------------------</h1>
+            <h2>Bucket List Hiking guides</h2>
+        </div>
+    </section>
+        <section class = "photocard container">
+            <div class="cr">
+                <img src="./images/mysore.jpeg"/>
+                <p>Mysore Palace, known as Amba Vilas Palace</p>
+            </div>
+            <div class="cr">
+                <img src="./images/jaisalmer.jpeg"/>
+                <p>Jaisalmer state in western India of Rajasthan</p>
+            </div>
+            <div class="cr">
+                <img src="./images/ooty.jpeg"/>
+                <p>Ooty a resort town in the Western Ghats mountains</p>
+            </div>
+        </section>
+
+        <section class = "photocard container">
+          <div class="cr">
+              <img src="./images/munnar.jpeg"/>
+              <p>Munnar a town in  Western Ghats</p>
+          </div>
+          <div class="cr">
+              <img src="./images/udaipur.jpeg"/>
+              <p>Udaipur, the capital of the Mewar Kingdom</p>
+          </div>
+          <div class="cr">
+              <img src="./images/coorg.jpeg"/>
+              <p>Madikeri,a hill town in southern India</p>
+          </div>
+      </section>
+      <section class="touch">
+        <div class="imagetouch">
+          <img src="./images/touch.jpg">
+          <div class="imagetext">
+          <h5>Get in Touch</h5>
+          <p class="imp">Feel free to contact me if you have travel questions, comments, or suggestions!
+            I'll try to get back to you!</p>
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+        </div>
+      </section>
+
+      <form class="newslet container">
+        <div class="newstext">
+          <h1>Newsletter</h1>
+          <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
+          <div class="email-sec">
+          <input type="text" name = "text" placeholder="Email...">
+          <input type="submit" name = "submit" value = "Submit">
+        </div>
+        </div>
+      </form>
+
+      <footer class="foot">
+        <div class="mainfoot">
+          <div class="iconsfoot">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-duotone fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div class="copyright">
+            <p>&copy Ankit's Blog 2024</p>
+          </div>
+          <div class="terms">
+            <ul>
+              <li><a href="#">Affiliate Disclosures </a></li>
+              <li><a href="#">Privacy Policy </a></li>
+              <li><a href="#">Terms and Conditions </a></li>
+            </ul>
+          </div>
+            <div class="footline">
+              <p>As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.</p>
+            </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
