@@ -1,0 +1,153 @@
+/* Base styles for responsiveness */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Flexbox adjustments */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Media queries for responsiveness */
+
+  /* For tablets and smaller screens */
+  @media only screen and (max-width: 1024px) {
+    /* Adjusting header navigation */
+    .topnav .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .headerinfo, .headerimg .container, .threecards, .video, .touch, .newslet {
+      padding: 20px;
+    }
+
+    .headers_cards {
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .threecards {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hike-text h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* For mobile phones */
+  @media only screen and (max-width: 768px) {
+    /* Header adjustments */
+    .topnav {
+      flex-direction: column;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      padding: 0 10px;
+    }
+
+    .headerinfo {
+      text-align: center;
+    }
+
+    /* Adjust cards to stack */
+    .headers_cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .tcard {
+      width: 100%;
+    }
+
+    .small-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sdcard {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .photocard {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cr {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .newslet .email-sec {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .email-sec input[type="text"] {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* For very small screens */
+  @media only screen and (max-width: 480px) {
+    .headerinfo .title {
+      font-size: 1.8rem;
+    }
+
+    .headerinfo .para {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .toggle {
+      width: 30px;
+      height: 15px;
+    }
+
+    .toggle_circle {
+      width: 15px;
+      height: 15px;
+    }
+
+    .headerbtn {
+      font-size: 0.8rem;
+    }
+
+    .newslet .newstext h1 {
+      font-size: 1.5rem;
+    }
+
+    .newstext p {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+
+    footer .iconsfoot i {
+      font-size: 1rem;
+    }
+
+    .imagetext h1 {
+      font-size: 1.2rem;
+    }
+
+    .imagetext p {
+      font-size: 0.9rem;
+    }
+  }
