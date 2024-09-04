@@ -165,6 +165,9 @@ body {
   padding-top: 5rem;
   padding-bottom: 10rem;
 }
+.headings:hover{
+  color:  var(--main-color);
+}
 .title {
   font-size: 70px;
   color: #fff;
@@ -562,12 +565,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .cr {
-    width: 100%;
-  }
-}
+
 
 .foot{
   background-color: #111111e8;
@@ -671,7 +669,7 @@ body {
 }
 
 .email-sec input[type="submit"]:hover {
-  background-color: #03930b;  
+  background-color: #03930b;
 }
 .touch{
   width: 100%;
