@@ -1,13 +1,12 @@
-/* Media Query for max-width: 425px */
+
 @media (max-width: 640px) {
-  /* General Body and Container Adjustments */
+
   body {
     padding: 0 10px;
     font-size: 14px;
     width: 100%;
   }
 
-  /* Container and Card Adjustments */
   .container,
   .threecards,
   .small-cards,
@@ -25,7 +24,6 @@
     margin: auto;
   }
 
-  /* Header and Navigation Adjustments */
   .topnav {
     height: 60px;
     flex-direction: column;
@@ -49,12 +47,12 @@
     margin-right: 0;
   }
 
-  /* Button Adjustments */
+
   .sliderbtn button {
     padding: 10px;
   }
 
-  /* Footer Adjustments */
+
   .foot {
     height: auto;
     padding: 10px;
@@ -74,7 +72,7 @@
     gap: 10px;
   }
 
-  /* Newsletter Section Adjustments */
+
   .newslet {
     padding: 1rem;
   }
@@ -95,7 +93,7 @@
     width: 28%;
   }
 
-  /* Image and Video Adjustments */
+
   .headerimg, .touch, .imagetext {
     width: 100%;
     max-height: 300px;
@@ -121,13 +119,13 @@
     font-size: 1.2rem;
   }
 
-  /* Button Styles */
+ 
   .read-more {
     font-size: 0.8rem;
     padding: 3px;
   }
 
-  /* Additional Adjustments */
+
   .explore {
     width: auto;
   }
