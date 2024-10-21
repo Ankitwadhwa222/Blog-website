@@ -1,0 +1,683 @@
+/* General Reset and Base Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #85b72c;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  font-family: Poppins;
+  transition: 0.4s;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+/* Navbar */
+.topnav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 10000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.logo h1 {
+  font-family: fantasy;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s ease;
+  letter-spacing: 2px;
+}
+
+.fa-sharp {
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: double;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8rem;
+}
+
+.fa-magnifying-glass {
+  font-size: 20px;
+}
+
+.searchbar_flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 190px;
+  margin-right: 5rem;
+}
+
+.searchbar_flex .login {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.toggle {
+  width: 70px;
+  height: 30px;
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: 0 0 5px #555;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.3rem;
+  transition: background-color 400ms;
+  cursor: pointer;
+}
+
+.toggle_circle {
+  width: 30px;
+  height: 20px;
+  background-color: hsl(96, 85%, 34%);
+  border-radius: 50%;
+  transition: margin 400ms ease-in-out, background-color 1000ms;
+}
+
+#checkbox:checked + .toggle > .toggle_circle {
+  margin-left: calc(40px - (0.3rem * 2));
+}
+
+.navbaronoff {
+  margin-left: 1rem;
+  visibility: hidden;
+}
+
+.explore {
+  width: 9rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--main-color);
+}
+
+.AddBlog {
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.AddBlog:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Main */
+
+.headerimg {
+  position: relative;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.headerimg .container {
+  width: 100%;
+  height: 100%;
+}
+
+.headerimg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.headerinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 9;
+  gap: 25px;
+  color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+.headings:hover {
+  color: var(--main-color);
+  text-decoration: overline;
+}
+
+.title {
+  font-size: 70px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.para {
+  font-size: 1rem;
+  padding-right: 35rem;
+  color: #fff;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -80px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .list .item {
+  width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.main .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.main .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.main .list .item .content .Place {
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.desc {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  border-radius: 20px;
+}
+
+.thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.thumbnail .item .content .titlee {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* Fixed arrows */
+.arrows {
+  position: absolute;
+  top: 85%;
+  right: 50%;
+  width: 380px;
+  max-width: 30%;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+  align-items: center;
+  z-index: 101;
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(238, 238, 238, 0.5);
+  color: #fff;
+  font-weight: 800;
+  font-family: monospace;
+  font-size: 30px;
+  border: none;
+  /* transition: background-color 0.3s, transform 0.3s; */
+  z-index: 101;
+}
+
+.arrows button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #555;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.main .list .item:nth-child(1){
+  z-index: 1;
+}
+
+
+.main .list .item:nth-child(1) .content .Place,
+.main .list .item:nth-child(1) .content .topic,
+.main .list .item:nth-child(1) .content .desc,
+.main .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+
+
+@keyframes showContent{
+  to{
+      transform: translateY(0px);
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+.main .list .item:nth-child(1) .content .Place{
+  animation-delay: 0.2s!important;
+}
+
+.main .list .item:nth-child(1) .content .desc{
+  animation-delay: 0.6s!important;
+}
+.main .list .item:nth-child(1) .content .buttons{
+  animation-delay: 0.8s!important;
+}
+/* create animation when next click */
+.main.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+  to{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+  }
+}
+
+
+.main.next .thumbnail .item:nth-last-child(1){
+  overflow: hidden;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+
+/* Creating previous section */
+/* Previous Item Styles */
+.main.prev .list .item img {
+  z-index: 100; /* Keep images above others */
+}
+
+.main.prev .list .item:nth-child(1) {
+  z-index: -1; /* Send the first item behind */
+}
+
+.main.prev .list .item:nth-child(1) img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
+  animation: resetImage 0.5s linear forwards; /* Trigger image reset animation */
+}
+
+.main.prev .list .item:nth-child(2) {
+  z-index: 1; /* Bring the second item to the front */
+}
+
+.main.prev .list .item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: outImage 0.5s linear forwards; /* Animate the second item out */
+}
+
+/* Animate content of the second item out */
+.main.prev .list .item:nth-child(2) .Place,
+.main.prev .list .item:nth-child(2) .desc,
+.main.prev .list .item:nth-child(2) button {
+  animation: contentOut 0.5s linear forwards; /* Animate content out */
+}
+
+/* Thumbnail behavior for the first item */
+.main.prev .thumbnail .item:nth-child(1) {
+  width: 0; /* Start with 0 width */
+  opacity: 0; /* Start hidden */
+  overflow: hidden; /* Prevent overflow */
+  animation: showThumbnail 0.5s linear forwards; /* Trigger thumbnail animation */
+}
+
+/* Thumbnail animation to show it */
+@keyframes showThumbnail {
+  to {
+    width: 150px; /* Set to the desired width */
+    opacity: 1; /* Fade in */
+  }
+}
+
+/* Additional Animations */
+@keyframes resetImage {
+  to {
+    width: 100%; /* Reset size */
+    height: 100%;
+    left: 0; /* Reset position */
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes outImage {
+  to {
+    width: 150px; /* Set to thumbnail size */
+    height: 220px; /* Set to thumbnail height */
+    border-radius: 20px; /* Add rounding */
+    left: 50%; /* Center it */
+    bottom: 50px; /* Move it up */
+  }
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px); /* Move out */
+    filter: blur(20px); /* Blur effect */
+    opacity: 0; /* Fade out */
+  }
+}
+
+
+/* End of previous */
+@keyframes showThumbnail{
+  from{
+      width: 0;
+      opacity: 0;
+  }
+}
+.main.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+      transform: translateX(150px);
+  }
+}
+
+
+
+
+
+@keyframes resetImage {
+  to {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    left: 0; /* Add missing left property */
+    bottom: 0;
+  }
+}
+
+
+
+
+@keyframes outImage {
+  to {
+    width: 150px;
+    height: 220px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 50px;
+  }
+}
+.main.prev .list .item img,
+.main.next .list .item img {
+  transition: all 0.5s ease;
+}
+
+
+/* .main.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+} */
+
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+/*
+.main.next .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.main.next .list .item:nth-child(1) .Place,
+.main.next .list .item:nth-child(1) .desc,
+.main.next .list .item:nth-child(1) button {
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    filter: blur(0px);
+  }
+}
+
+.main.next .list .item {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}*/
+
+
+
+@keyframes showThumbnail {
+  to {
+    opacity: 1;
+    width: 150px;
+
+  }
+}
+
+
+.main.next .thumbnail {
+  transform: translateX(150px);
+  animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* .main.prev .thumbnail .item:nth-child(1) {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+} */
+/*
+.main.prev .arrows button,
+.main.next .arrows button {
+  pointer-events: none;
+} */
+
+/* Media Queries */
+/* @media screen and (max-width: 778px) and (min-width: 370px) {
+  .main .list .item .content {
+    padding-right: 0;
+  }
+
+  .main .list .item .content .title {
+    font-size: 30px;
+  }
+
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .topnav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 60px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .searchbar_flex {
+    display: none;
+  }
+
+  .search {
+    margin-right: 0;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 16px;
+  }
+
+  .toggle {
+    width: 50px;
+    height: 25px;
+  }
+
+  .toggle_circle {
+    width: 20px;
+    height: 20px;
+  }
+} */

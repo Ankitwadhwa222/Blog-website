@@ -901,6 +901,9 @@ body {
   .nav-links {
     display: none;
   }
+  .para{
+    display: none;
+  }
 }
 .navbaronoff {
   display: none;
