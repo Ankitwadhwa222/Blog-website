@@ -17,7 +17,7 @@
     />
     <link rel="shortcut icon" href="./images/icon.jpeg" />
   </head>
-  <body>
+  <body class="complete">
     <!-- Header -->
     <header>
       <div class="topnav">
@@ -25,13 +25,15 @@
           <i class="fa-sharp fa-solid fa-plane"></i>
           <h1>Travel Blog</h1>
         </div>
-        <div class="container flex">
+        <div class="container flex nav-links">
           <a
             href="http://127.0.0.1:5500/index.html?text=df&submit=Submit"
             class="headings"
             >Home</a
           >
-          <a href="#" class="headings">Categories</a>
+          <a href="http://127.0.0.1:5500/starting.html" class="headings"
+            >Categories</a
+          >
           <a href="#" class="headings">Blog</a>
           <a href="#" class="headings">Places</a>
           <a href="http://127.0.0.1:5500/contact.html" class="headings"
@@ -44,8 +46,11 @@
             <div class="toggle_circle"></div>
           </label>
           <div class="navbaronoff">
-            <i class="fa-sharp fa-solid fa-bars"></i>
+            <i class="fa-sharp fa-solid fa-bars" id="menuToggle"></i>
           </div>
+          <a href="http://127.0.0.1:5500/Addblog.html">
+            <button class="AddBlog">Add Your Blog</button></a
+          >
         </div>
       </div>
     </header>
@@ -181,7 +186,7 @@
           <div class="read-more">Read More</div>
         </div>
       </div>
-      <div class="places">
+      <div class="places liv">
         <h2>Places To Visit :</h2>
       </div>
       <!-- Small cards -->
@@ -191,7 +196,7 @@
             <img src="./images/mumbai.webp" />
             <div class="smallcard-info flex">
               <label class="slabel">Mumbai</label>
-              <p>
+              <p class="scp">
                 Known as the "City of Dreams," Mumbai offers a vibrant mix of
                 cultures, bustling markets, and iconic landmarks like the
                 Gateway of India.
@@ -206,7 +211,7 @@
             <img src="./images/dalhousie.webp" />
             <div class="smallcard-info flex">
               <label class="slabel">Dalhousie</label>
-              <p>
+              <p class="scp">
                 Nestled in the lap of the Himalayas, Dalhousie is a quaint hill
                 station known for its colonial charm and scenic beauty.
               </p>
@@ -220,7 +225,7 @@
             <img src="./images/ladakh.jpg" />
             <div class="smallcard-info flex">
               <label class="slabel">Ladakh</label>
-              <p>
+              <p class="scp">
                 Ladakh is a cold desert, known for its rugged landscapes,
                 Buddhist monasteries, and unique culture.
               </p>
@@ -234,7 +239,7 @@
             <img src="./images/varanasi.webp" alt="Varanasi" />
             <div class="smallcard-info flex">
               <label class="slabel">Varanasi</label>
-              <p>
+              <p id="scp">
                 Varanasi, located on the banks of the Ganges, is one of the
                 oldest cities in the world, known for its spiritual ambiance and
                 vibrant ghats.
@@ -249,7 +254,7 @@
             <img src="./images/varanasi.webp" />
             <div class="smallcard-info flex">
               <label class="slabel">Morni Hills</label>
-              <p>
+              <p id="scp">
                 A hidden gem in the hills, Morni offers serene landscapes and
                 adventure opportunities.
               </p>
@@ -266,7 +271,7 @@
             />
             <div class="smallcard-info flex">
               <label class="slabel">Seema Malaka Temple</label>
-              <p>
+              <p id="scp">
                 Located in Colombo, Sri Lanka, Seema Malaka is a serene Buddhist
                 temple situated on the Beira Lake, known for its tranquil
                 ambiance and scenic beauty.
@@ -284,7 +289,7 @@
             />
             <div class="smallcard-info flex">
               <label class="slabel">Golden Temple</label>
-              <p>
+              <p id="scp">
                 The Golden Temple, located in Amritsar, is a spiritual and
                 cultural center for Sikhs worldwide, renowned for its stunning
                 architecture and peaceful surroundings.
@@ -302,7 +307,7 @@
             />
             <div class="smallcard-info flex">
               <label class="slabel">Humayun's Tomb</label>
-              <p>
+              <p id="scp">
                 A UNESCO World Heritage Site in Delhi, Humayun's Tomb is a
                 masterpiece of Mughal architecture, with beautiful gardens and
                 intricate carvings.
@@ -327,90 +332,91 @@
           </p>
         </div>
       </div>
-      <section class="Hikes">
+      <section class="Hikes liv1">
         <div class="hike-text">
-          <h1>->HIKES</h1>
-          <h2>Bucket List Hiking guides</h2>
+          <h1 style="text-align: center">HIKES</h1>
+          <h20>Bucket List Hiking guides</h20>
         </div>
       </section>
-      <section class="photocard container">
-        <div class="cr">
-          <img src="./images/mysore.jpeg" />
-          <p>Mysore Palace, known as Amba Vilas Palace</p>
-        </div>
-        <div class="cr">
-          <img src="./images/jaisalmer.jpeg" />
-          <p>Jaisalmer state in western India of Rajasthan</p>
-        </div>
-        <div class="cr">
-          <img src="./images/ooty.jpeg" />
-          <p>Ooty a resort town in the Western Ghats mountains</p>
-        </div>
-      </section>
-
-      <section class="photocard container">
-        <div class="cr">
-          <img src="./images/munnar.jpeg" />
-          <p>Munnar a town in Western Ghats</p>
-        </div>
-        <div class="cr">
-          <img src="./images/udaipur.jpeg" />
-          <p>Udaipur, the capital of the Mewar Kingdom</p>
-        </div>
-        <div class="cr">
-          <img src="./images/coorg.jpeg" />
-          <p>Madikeri,a hill town in southern India</p>
-        </div>
-      </section>
-      <section class="Hikes">
-        <div class="hike-text">
-          <h1>Destinations</h1>
-          <h2>Bucket List Hiking guides</h2>
-        </div>
-      </section>
-      <section class="photocard container">
-        <div class="cr">
-          <img src="./images/mysore.jpeg" />
-          <p>Mysore Palace, known as Amba Vilas Palace</p>
-        </div>
-        <div class="cr">
-          <img src="./images/jaisalmer.jpeg" />
-          <p>Jaisalmer state in western India of Rajasthan</p>
-        </div>
-        <div class="cr">
-          <img src="./images/ooty.jpeg" />
-          <p>Ooty a resort town in the Western Ghats mountains</p>
-        </div>
-      </section>
-
-      <section class="photocard container">
-        <div class="cr">
-          <img src="./images/munnar.jpeg" />
-          <p>Munnar a town in Western Ghats</p>
-        </div>
-        <div class="cr">
-          <img src="./images/udaipur.jpeg" />
-          <p>Udaipur, the capital of the Mewar Kingdom</p>
-        </div>
-        <div class="cr">
-          <img src="./images/coorg.jpeg" />
-          <p>Madikeri,a hill town in southern India</p>
-        </div>
-      </section>
-      <section class="touch">
-        <div class="imagetouch">
-          <img src="./images/touch.jpg" />
-          <div class="imagetext">
-            <h5>Get in Touch</h5>
-            <p class="imp">
-              Feel free to contact me if you have travel questions, comments, or
-              suggestions! I'll try to get back to you!
-            </p>
-            <i class="fa-brands fa-telegram"></i>
+      <div class="liv">
+        <section class="photocard container">
+          <div class="cr">
+            <img src="./images/mysore.jpeg" />
+            <p>Mysore Palace, known as Amba Vilas Palace</p>
           </div>
-        </div>
-      </section>
+          <div class="cr">
+            <img src="./images/jaisalmer.jpeg" />
+            <p>Jaisalmer state in western India of Rajasthan</p>
+          </div>
+          <div class="cr">
+            <img src="./images/ooty.jpeg" />
+            <p>Ooty a resort town in the Western Ghats mountains</p>
+          </div>
+        </section>
 
+        <section class="photocard container">
+          <div class="cr">
+            <img src="./images/munnar.jpeg" />
+            <p>Munnar a town in Western Ghats</p>
+          </div>
+          <div class="cr">
+            <img src="./images/udaipur.jpeg" />
+            <p>Udaipur, the capital of the Mewar Kingdom</p>
+          </div>
+          <div class="cr">
+            <img src="./images/coorg.jpeg" />
+            <p>Madikeri,a hill town in southern India</p>
+          </div>
+        </section>
+        <section class="Hikes">
+          <div class="hike-text">
+            <h1>Destinations</h1>
+            <h2>Bucket List Hiking guides</h2>
+          </div>
+        </section>
+        <section class="photocard container">
+          <div class="cr">
+            <img src="./images/mysore.jpeg" />
+            <p>Mysore Palace, known as Amba Vilas Palace</p>
+          </div>
+          <div class="cr">
+            <img src="./images/jaisalmer.jpeg" />
+            <p>Jaisalmer state in western India of Rajasthan</p>
+          </div>
+          <div class="cr">
+            <img src="./images/ooty.jpeg" />
+            <p>Ooty a resort town in the Western Ghats mountains</p>
+          </div>
+        </section>
+
+        <section class="photocard container">
+          <div class="cr">
+            <img src="./images/munnar.jpeg" />
+            <p>Munnar a town in Western Ghats</p>
+          </div>
+          <div class="cr">
+            <img src="./images/udaipur.jpeg" />
+            <p>Udaipur, the capital of the Mewar Kingdom</p>
+          </div>
+          <div class="cr">
+            <img src="./images/coorg.jpeg" />
+            <p>Madikeri,a hill town in southern India</p>
+          </div>
+        </section>
+        <section class="touch">
+          <div class="imagetouch">
+            <img src="./images/touch.jpg" />
+            <div class="imagetext">
+              <h5>Get in Touch</h5>
+              <p class="imp">
+                Feel free to contact me if you have travel questions, comments,
+                or suggestions! I'll try to get back to you!
+              </p>
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+          </div>
+        </section>
+      </div>
       <form class="newslet container">
         <div class="newstext">
           <h1>Newsletter</h1>
@@ -419,8 +425,8 @@
             guides. Let's stay updated!
           </p>
           <div class="email-sec">
-            <input type="text" name="text" placeholder="Email..." />
-            <input type="submit" name="submit" value="Submit" />
+            <input type="text" name="text" placeholder="Email..."  class = "news" required/>
+            <input type="submit" name="submit" value="Submit" class = "sub" />
           </div>
         </div>
       </form>
@@ -456,5 +462,6 @@
         </div>
       </footer>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
