@@ -41,20 +41,56 @@ body {
   width: 100%;
   height: 80px;
   display: flex;
+  position: static;
+  justify-content: space-between;
+  top: 0; /* Ensures the navbar stays at the top */
+  left: 0; /* Ensures the navbar is aligned to the left */
   box-shadow: 0 0 5px #999;
+  background-color: white; /* Add a background color if needed */
+  z-index: 1000; /* Ensures the navbar appears above other content */
 }
+
+/* Hide the navbar links by default */
+/* .nav-links {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff99;
+  top: 0px;
+  left: 150px;
+  width: 100%;
+  z-index: 1000;
+  max-width: 200px;
+  overflow-x: visible;
+  padding: 15px;
+
+} */
+
+
+/* .nav-links.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/*
+#menuToggle {
+  cursor: pointer;
+} */
+
+
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
+  margin-left: 5rem;
 }
 .logo h1 {
   font-family: fantasy;
   display: inline;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
+  margin-left: rem;
   font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -80,9 +116,9 @@ body {
 /* Section 2  =  searchInput and DarkMode */
 .searchbar_flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  width: fit-content;
+  width: 250px;
   margin-right: 5rem;
 }
 .toggle {
@@ -113,7 +149,7 @@ body {
 }
 .navbaronoff {
   margin-left: 1rem;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .explore {
   width: 9rem;
@@ -122,26 +158,35 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   background-color: var(--main-color);
-
 }
-
+.AddBlog {
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid black;
+}
+.AddBlog:hover{
+  background-color: var(--main-color);
+  color: white;
+}
 /* Main */
 
 .headerimg {
   position: relative;
-  width: 100%;
   height: auto;
-  background: url("https://cdn.pixabay.com/photo/2020/04/28/04/17/monastery-5102601_1280.jpg")
-    no-repeat center center/cover;
-
-  z-index: 1;
-  transition: 0.3s ease;
-
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  filter: brightness(98%);
+  transition: background-image 0.8s ease-in-out;
 }
 .headerimg .container {
   width: 100%;
   height: 100%;
-
 }
 .headerimg::before {
   content: "";
@@ -153,7 +198,6 @@ body {
   background-color: #111;
   opacity: 0.3;
   z-index: -1;
-
 }
 .headerinfo {
   display: flex;
@@ -165,8 +209,9 @@ body {
   padding-top: 5rem;
   padding-bottom: 10rem;
 }
-.headings:hover{
-  color:  var(--main-color);
+.headings:hover {
+  color: var(--main-color);
+  text-decoration: overline;
 }
 .title {
   font-size: 70px;
@@ -194,22 +239,20 @@ body {
   margin-right: auto;
   gap: 50px;
 }
-.slidertitle{
+.slidertitle {
   color: #ffffff;
   display: flex;
 
   justify-content: space-between;
   width: 100%;
   height: fit-content;
-
-
 }
-.slidertitle h2{
+.slidertitle h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 800;
 }
-.sliderbtn button{
+.sliderbtn button {
   position: relative;
   padding: 15px;
   border: 2px solid #fff;
@@ -219,8 +262,8 @@ body {
   margin-right: 5px;
   cursor: pointer;
 }
-.sliderbtn button::after{
-  content: ' ';
+.sliderbtn button::after {
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +276,7 @@ body {
   z-index: -1;
 }
 .sliderbtn button:hover::after,
-.sliderbtn button:hover{
+.sliderbtn button:hover {
   transform: scale(1);
   border: 2px solid var(--main-color);
 }
@@ -248,7 +291,6 @@ body {
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-
 }
 
 .card {
@@ -288,14 +330,13 @@ body {
 .card:hover img {
   transform: scale(1.1);
 }
-.info span{
-   font-weight: 800;
-   font-size: 20px;
+.info span {
+  font-weight: 800;
+  font-size: 20px;
 }
 /* Threecrds */
 /* Container for three cards */
 .threecards {
-
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -304,7 +345,6 @@ body {
   max-width: 1100px;
   margin: auto;
   display: flex;
-
 }
 
 /* Individual card styling */
@@ -405,20 +445,19 @@ body {
   font-weight: 800;
 }
 /* Places */
-.places{
+.places {
   max-width: 1100px;
   margin: auto;
   display: flex;
   margin-top: 5rem;
 }
-.places h2{
+.places h2 {
   font-size: 35px;
-  -webkit-text-stroke-color: #ffbf00;
   text-decoration: double;
   font-weight: 800;
 }
 /* small cards */
-.small-cards{
+.small-cards {
   display: flex;
   justify-content: space-around;
   gap: 20px;
@@ -431,7 +470,7 @@ body {
 .small-cards:hover {
   transform: translateY(-10px);
 }
-.sdcard{
+.sdcard {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -440,33 +479,33 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.5s ease-in;
+  transition: transform 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid transparent; /* Initial border */
   overflow: hidden;
   position: relative;
-
 }
-.sdcard:hover{
-  transform: scale(1.1);
-  box-shadow: 8px 8px 10px 4px rgba(0, 0, 0, 0.5);
-  padding: 5px;
+.sdcard:hover {
+  transform: scale(1.05); /* Zooms the card slightly */
+  border: 2px solid var(--main-color); /* Changes the border color on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
 }
-.smallcard-img img{
+.smallcard-img img {
   height: 10rem;
   width: 100%;
 }
-.smallcard-info{
+.smallcard-info {
   margin-top: 15px;
 }
 
-.smallcard-info p{
+.smallcard-info p {
   margin-top: 15px;
 }
 
-.slabel{
+.slabel {
   color: brown;
   font-weight: 700;
 }
-.smallcard-img img:hover{
+.smallcard-img img:hover {
   transform: scale(1.1);
 }
 .video {
@@ -491,24 +530,21 @@ body {
   height: 100%;
   display: grid;
 
-
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   padding: 20px;
   text-align: center;
-
-
 }
-.imagetext h1{
+.imagetext h1 {
   font-size: 7rem;
   font-weight: 600;
 }
-.imagetext p{
+.imagetext p {
   font-size: 25px;
   font-weight: 500;
 }
-.Hikes{
+.Hikes {
   max-width: 1100px;
   margin: auto;
   display: flex;
@@ -517,16 +553,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-.Hikes h1{
+.Hikes h1 {
   font-size: 3rem;
   font-weight: 500;
-
 }
-.Hikes h2{
+.Hikes h2 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 500;
   text-align: center;
-
 }
 .photocard {
   max-width: 1100px;
@@ -553,8 +587,9 @@ body {
 }
 
 .cr:hover {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6a1;
   border-radius: 10px;
+  color: black;
 }
 
 .cr p {
@@ -565,9 +600,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-.foot{
+.foot {
   background-color: #111111e8;
   color: #ffffff93;
   height: 13rem;
@@ -576,8 +609,7 @@ body {
   font-style: italic;
   position: static;
 }
-.iconsfoot{
-
+.iconsfoot {
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -585,35 +617,34 @@ body {
   cursor: pointer;
   transition: 0.2s color;
 }
-.fa-brands:hover{
+.fa-brands:hover {
   color: orange;
-
 }
-.copyright{
+.copyright {
   display: flex;
   justify-content: center;
 }
-.copyright p{
+.copyright p {
   text-transform: uppercase;
   text-decoration: overline;
   font-style: italic;
   letter-spacing: 5px;
   color: orange;
 }
-.footline{
+.footline {
   display: flex;
   justify-content: center;
   margin-top: 5px;
 }
-.terms{
+.terms {
   display: flex;
   justify-content: center;
 }
-.terms ul{
+.terms ul {
   display: flex;
-   list-style: disc;
-   gap: 20px;
-   color: orange;
+  list-style: disc;
+  gap: 20px;
+  color: orange;
 }
 .newslet {
   display: flex;
@@ -661,7 +692,7 @@ body {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -671,27 +702,252 @@ body {
 .email-sec input[type="submit"]:hover {
   background-color: #03930b;
 }
-.touch{
+.touch {
   width: 100%;
   overflow: hidden;
   max-height: 600px;
   position: relative;
   margin-top: 2rem;
 }
-.imagetouch img{
+.imagetouch img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.imagetext h5{
+.imagetext h5 {
   font-size: 5rem;
-}.imagetext p{
+}
+.imagetext p {
   font-size: 1.5rem;
 }
 .imagetext i {
   font-size: 5rem;
-
 }
 
+.black {
+  color: black;
+  background-color: black;
+}
+.white{
+  color: #fff;
+}
+.bblack{
+  background-color: #111;
+  color: #ffffff;
+}
+.sblack{
+  background-color: #111;
+  color: #ffffff;
+}
+
+
+
+
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    overflow-y: hidden;
+  }
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: flex-start; /* Align links to the left */
+    width: 100%; /* Full width for navigation */
+  }
+  .nav-links a {
+    margin-bottom: 10px; /* Add space between links */
+    text-align: left; /* Left align text */
+  }
+  .searchbar_flex {
+    flex-direction: column;
+  }
+  .searchbar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .AddBlog {
+    margin-top: 10px;
+  }
+  .headerimg {
+    text-align: center;
+  }
+  .headerinfo {
+    text-align: center;
+  }
+  .explore {
+    margin: 10px auto;
+    text-align: center;
+  }
+  .headerbtn {
+    display: block;
+    margin: 0 auto;
+  }
+  .headers_cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
+  .card {
+    margin-bottom: 20px; /* Add space between cards */
+    width: 100%; /* Full width for cards */
+  }
+  .info {
+    text-align: center;
+  }
+  .threecards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tcard {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .tcard-info {
+    justify-content: center;
+    align-items: center;
+  }
+  .star-rating {
+    justify-content: center;
+    align-items: center;
+  }
+  .tlabel {
+    font-size: 1rem;
+ }
+  .small-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sdcard {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .smallcard-info {
+    justify-content: center;
+    align-items: center;
+  }
+  .slabel {
+    font-size: 1rem;
+  }
+  .scp {
+    font-size: 0.8rem;
+  }
+  .video {
+    display: none;
+  }
+  .photocard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cr {
+    margin-bottom: 20px;
+  }
+  .hike-text {
+    text-align: center;
+  }
+  .imagetouch {
+    margin: 0 auto;
+  }
+  .imagetext {
+    text-align: center;
+  }
+  .newslet {
+    text-align: center;
+  }
+  .newstext {
+    text-align: center;
+  }
+  .email-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .sub {
+    width: 100%;
+  }
+  .foot {
+    text-align: center;
+  }
+  .mainfoot {
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconsfoot {
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .terms {
+    text-align: center;
+  }
+  .footline {
+    text-align: center;
+  }
+  .explore{
+    display: none;
+  }
+  .AddBlog{
+    display: none;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+.navbaronoff {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+
+
+/* Show the logo */
+
+
+/* Hide nav links by default on small screens */
+
+
+/* Media Query for Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbaronoff {
+    display: block; /* Show the toggle button */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+
+  /* Show nav links when toggle is active */
+  .nav-links.active {
+    display: flex; /* Show links when active */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position it absolutely */
+    top: 60px; /* Position below the navbar */
+    left: 50;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.881); /* Background color for the menu */
+    width: fit-content;
+    padding: 30px;
+    z-index: 9999; /* Ensure it appears above other content */
+    font-size: 25px;
+  }
+}
+
+
+/* Show the navbar icon on smaller screens */
+@media screen and (max-width: 768px) {
+  .navbaronoff {
+    display: block;
+  }
+}
 
